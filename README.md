@@ -2,10 +2,12 @@
 
 AWS Tutorial
 https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
+https://github.com/jpadilla/django-project-template
 
 ```bash
-$ django-admin.py startproject --template=https://github.com/linuxluigi/template-django-wagtail-zappa/archive/master.zip --name=Procfile helloworld
+$ django-admin.py startproject --template=https://github.com/linuxluigi/template-django-wagtail/archive/master.zip helloworld
 ```
+change helloworld to your project name
 
 todo: add placeholder
 * .idea
