@@ -3,6 +3,11 @@
 AWS Tutorial
 https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
 
+todo: add placeholder
+* .idea
+* settings
+* project name
+
 ```bash
 virtualenv venv
 pip install -r requirements.txt 

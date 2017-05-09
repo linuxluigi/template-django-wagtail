@@ -4,7 +4,7 @@ from .base import *
 
 DEBUG = False
 
-SECRET_KEY = '#&k6@a8y4v(m_r82178846qo-lqs__2fyefqd+qvcv$nl4^ql('
+SECRET_KEY = os.environ['SECRET_KEY']
 
 ALLOWED_HOSTS = ['*']
 
@@ -19,7 +19,7 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
 }
 
 # AWS credentials
-AWS_STORAGE_BUCKET_NAME = 'project_name'
+AWS_STORAGE_BUCKET_NAME = '{{ project_name }}'
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
@@ -32,13 +32,13 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # Static Files
 STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'project_name.s3_storages.StaticStorage'
+STATICFILES_STORAGE = '{{ project_name }}.s3_storages.StaticStorage'
 STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 
 # Media Files
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-DEFAULT_FILE_STORAGE = 'project_name.s3_storages.MediaStorage'
+DEFAULT_FILE_STORAGE = '{{ project_name }}.s3_storages.MediaStorage'
 
 """
 DATABASES = {    
