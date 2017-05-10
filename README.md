@@ -31,9 +31,6 @@ pip install -r requirements.txt
 
 # AWS Settings
 
-todo:
-* create a aws user
-
 ## S3 - CORS
 
 Example Cors
@@ -53,13 +50,28 @@ Example Cors
 
 ## Heroku
 
+
+
 todo: update settings for heroku
 add heroku tool to upload env
 https://github.com/heroku/heroku-django-template/blob/master/project_name/settings.py
 
-## Using Python 2.7?
+### Using Python 2.7?
 
 Just update `runtime.txt` to `python-2.7.13` (no trailing spaces or newlines!).
+
+## Deployment to Heroku
+
+```bash
+git init
+git add -A
+git commit -m "Initial commit"
+
+heroku create
+git push heroku master
+
+heroku run python manage.py migrate
+```
 
 ## Zappa - AWS Lamda 
 
@@ -71,6 +83,11 @@ https://github.com/Miserlou/Zappa
 4. upload your env to lambda -> http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
 5. Update
 6. Use a coustom Domain
+
+# Other Django Project Templates
+
+* https://github.com/jpadilla/django-project-template
+* https://github.com/heroku/heroku-django-template/
 
 # License
 
