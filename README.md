@@ -23,8 +23,7 @@ pip install -r requirements.txt
 
 todo:
 * create a aws user
-* add sns
-* add RDS
+* add ses
 * add cloudflare support
 
 ## S3 - CORS
@@ -48,6 +47,7 @@ Example Cors
 ## Heroku
 
 todo: update settings for heroku
+add heroku tool to upload env
 https://github.com/heroku/heroku-django-template/blob/master/project_name/settings.py
 
 ## Using Python 2.7?
