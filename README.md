@@ -8,15 +8,26 @@ $ django-admin.py startproject --template=https://github.com/linuxluigi/template
 ```
 change helloworld to your project name
 
-todo: add placeholder
-* .idea
-* settings
-* project name
+
+# Local development
+
+Setting up local venv for Python 2
 
 ```bash
 virtualenv venv
+```
+
+And for Python 3
+
+```bash
+virtualenv -p python3 venv
+```
+
+Install requirements:
+```bash
 pip install -r requirements.txt 
 ```
+
 
 # AWS Settings
 
@@ -38,7 +49,6 @@ Example Cors
 </CORSConfiguration>
 ```
 
-
 # Deployment
 
 ## Heroku
@@ -53,4 +63,11 @@ Just update `runtime.txt` to `python-2.7.13` (no trailing spaces or newlines!).
 
 ## Zappa - AWS Lamda 
 
-add enviroment http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
+https://github.com/Miserlou/Zappa
+
+1. Create a AWS User with a VPC -> http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_IAM.html
+2. generate zappa json
+3. deploy your application
+4. upload your env to lambda -> http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
+5. Update
+6. Use a coustom Domain
