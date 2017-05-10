@@ -2,7 +2,6 @@
 
 AWS Tutorial
 https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
-https://github.com/jpadilla/django-project-template
 
 ```bash
 $ django-admin.py startproject --template=https://github.com/linuxluigi/template-django-wagtail/archive/master.zip helloworld
@@ -23,8 +22,6 @@ pip install -r requirements.txt
 
 todo:
 * create a aws user
-* add ses
-* add cloudflare support
 
 ## S3 - CORS
 
@@ -55,3 +52,5 @@ https://github.com/heroku/heroku-django-template/blob/master/project_name/settin
 Just update `runtime.txt` to `python-2.7.13` (no trailing spaces or newlines!).
 
 ## Zappa - AWS Lamda 
+
+add enviroment http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html

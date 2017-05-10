@@ -55,6 +55,21 @@ DATABASES = {
 """
 
 
+# Cloudflare
+WAGTAILFRONTENDCACHE = {
+    'cloudflare': {
+        'BACKEND': 'wagtail.contrib.wagtailfrontendcache.backends.CloudflareBackend',
+        'EMAIL': os.environ['CLOUDFLARE_EMAIL'],
+        'TOKEN': os.environ['CLOUDFLARE_TOKEN'],
+        'ZONEID': os.environ['CLOUDFLARE_ZONEID'],
+    },
+}
+
+# AWS ses for sending emails, need to be enabled first
+# EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_SES_REGION_NAME = os.environ['AWS_SES_REGION_NAME']
+AWS_SES_REGION_ENDPOINT = os.environ['AWS_SES_REGION_ENDPOINT']
+
 try:
     from .local import *
 except ImportError:

@@ -4,7 +4,7 @@
     <facet type="django" name="Django">
       <configuration>
         <option name="rootFolder" value="$MODULE_DIR$" />
-        <option name="settingsModule" value="project_name/settings/dev.py" />
+        <option name="settingsModule" value="{{ project_name }}/settings/dev.py" />
         <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
       </configuration>
@@ -21,7 +21,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/project_name/templates" />
+        <option value="$MODULE_DIR$/{{ project_name }}/templates" />
         <option value="$MODULE_DIR$/home/templates" />
       </list>
     </option>

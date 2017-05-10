@@ -13,3 +13,6 @@ zappa>=0.41.2
 # aws s3
 django-storages>=1.5.2
 boto>=2.46.1
+
+# aws ses for email
+django-ses>=0.8.2
