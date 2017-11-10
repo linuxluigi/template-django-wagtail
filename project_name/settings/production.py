@@ -1,4 +1,5 @@
 from __future__ import absolute_import, unicode_literals
+from .base import INSTALLED_APPS, MIDDLEWARE
 
 from .base import *
 
@@ -59,17 +60,18 @@ DATABASES = {
 }
 """
 
-"""
-# Cloudflare
-WAGTAILFRONTENDCACHE = {
-    'cloudflare': {
-        'BACKEND': 'wagtail.contrib.wagtailfrontendcache.backends.CloudflareBackend',
-        'EMAIL': os.environ['CLOUDFLARE_EMAIL'],
-        'TOKEN': os.environ['CLOUDFLARE_TOKEN'],
-        'ZONEID': os.environ['CLOUDFLARE_ZONEID'],
-    },
-}
-"""
+if 'wagtail.contrib.wagtailfrontendcache' in INSTALLED_APPS:
+    # Cloudflare
+    WAGTAILFRONTENDCACHE = {
+        'cloudflare': {
+            'BACKEND': 'wagtail.contrib.wagtailfrontendcache.backends.CloudflareBackend',
+            'EMAIL': os.environ['CLOUDFLARE_EMAIL'],
+            'TOKEN': os.environ['CLOUDFLARE_TOKEN'],
+            'ZONEID': os.environ['CLOUDFLARE_ZONEID'],
+        },
+    }
+
+    MIDDLEWARE += ("wagtail.contrib.wagtailfrontendcache",)
 
 # AWS ses for sending emails, need to be enabled first
 # EMAIL_BACKEND = 'django_ses.SESBackend'
