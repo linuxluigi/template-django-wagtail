@@ -1,5 +1,7 @@
 # Template for Django Wagtail - Not production ready
 
+Dokumenation: http://template-django-wagtail.readthedocs.io/en/latest/deploy.html
+
 AWS Tutorial
 https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
 
