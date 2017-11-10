@@ -16,3 +16,6 @@ boto>=2.46.1
 
 # aws ses for email
 django-ses>=0.8.2
+
+# for staging password protection
+django-lockdown>=1.4.2,<1.5
