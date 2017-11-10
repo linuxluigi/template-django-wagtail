@@ -19,7 +19,3 @@ django-ses>=0.8.2
 
 # for staging password protection
 django-lockdown>=1.4.2,<1.5
-
-# docs
-Sphinx>=1.6.3
-sphinx_rtd_theme>=0.2.5b1
