@@ -27,7 +27,12 @@ AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_AUTO_CREATE_BUCKET = True
 
 # S3 URL
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+if AWS_STORAGE_BUCKET_NAME.find('.') == -1:
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+else:
+    # use own custom domain for s3
+    AWS_S3_CALLING_FORMAT = 'boto.s3.connection.OrdinaryCallingFormat'
+    AWS_S3_CUSTOM_DOMAIN = '%s' % AWS_STORAGE_BUCKET_NAME
 
 # Static Files
 STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
